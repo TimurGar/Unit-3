@@ -22,3 +22,4 @@ print(total(["apple","laptop","wine"], [100, 45000, 3000]))
 print(total(["whiskey","orange","iphone"], [5000, 200, 36000]))
 ```
 ### Result:
+![photo](https://github.com/TimurGar/Unit-3/blob/main/Result%20to%20Quiz%2013.png)
