@@ -10,16 +10,17 @@ def total(items,prices):
     total = 0
     for p,i in enumerate(items):     # index, item
         if i in food:
-            total += (prices[p] + prices[p]/10)
+            total += prices[p] * 1.1
         if i in electronics:
-            total += (prices[p] + prices[p]/15)
+            total += prices[p] * 1.15
         if i in liqueur:
-            total += (prices[p] + prices[p]/20)
+            total += prices[p] * 1.2
 
     return total
 print(total(["bread","beer","ipad"], [300, 800, 30000]))
-print(total(["apple","laptop","wine"], [100, 45000, 3000]))
+print(total(["apple","laptop","wine"], [200, 55000, 3000]))
 print(total(["whiskey","orange","iphone"], [5000, 200, 36000]))
+
 ```
 ### Result:
 ![photo](https://github.com/TimurGar/Unit-3/blob/main/Result%20to%20Quiz%2013.png)
