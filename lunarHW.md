@@ -4,6 +4,10 @@
 ![](https://github.com/TimurGar/Unit-3/blob/main/ER%20diagram%20for%20Phone%20Store%20Application.png)
 Fig 1. Image of the ER diagram for the Phone store
 
+![](https://github.com/TimurGar/Unit-3/blob/main/Phone%20store%20db.png)
+Fig 2. Image of the table of the Phone store database 
+
+
 ```.py
 -- Database for the phone store
 
@@ -20,9 +24,11 @@ VALUES ('Juan',12345678,'juan@gmail.com','2020-11-20'),
        ('Tim',9760492,'timtim@gmail.com','2021-01-01');
 ```
 
+
+
 ## UML diagram for the database
 ![](https://github.com/TimurGar/Unit-3/blob/main/UML%20diagram%20for%20Phone%20store.png)
-Fig 2. Image of the UML diagram for the Phone store
+Fig 3. Image of the UML diagram for the Phone store
 
 ## Creating the database using ORM and adding some sample users
 ```.py
