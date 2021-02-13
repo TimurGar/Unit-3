@@ -75,3 +75,7 @@ s.close()
 ```
 ![](https://github.com/TimurGar/Unit-3/blob/main/Phone%20store%20db.png)
 Fig 4. Image of the table of the Phone store database created using ORM
+
+# How hash functions can be used to improve the security of the private data in the database
+A hash function is a mathematical algorithm that maps(breaks) data of any size to a bit string of a fixed size, which can also be called "hash". Because of that it's easy to compute the hash, but difficult to re-generate the original input if only the hash value is known. It's also difficult to create an initial input that would match a specific desired output. Therefore, in contrast to encryption, hashing is a one-way mechanism. 
+In other words, hash algorithm is kind of similar to a bark code,where the last digit is being determined based on other digits so if you change any digit the last one will change as well. But in hash algorithm the key is being generated based on the whole file even if it is big one, so if will you change even one bite of data in the file, the key is going to be completely different. This makes hash algorithm very useful in securing private data in the databases as it makes the data very hard to decrypt and so secure. 
