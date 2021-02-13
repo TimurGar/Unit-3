@@ -22,4 +22,5 @@ VALUES ('Juan',12345678,'juan@gmail.com','2020-11-20'),
 
 ## UML diagram for the database
 ![](https://github.com/TimurGar/Unit-3/blob/main/UML%20diagram%20for%20Phone%20store.png)
+Fig 2. Image of the UML diagram for the Phone store
 
