@@ -73,3 +73,5 @@ s.add(user3)
 s.commit()
 s.close()
 ```
+![](https://github.com/TimurGar/Unit-3/blob/main/Phone%20store%20db.png)
+Fig 4. Image of the table of the Phone store database created using ORM
