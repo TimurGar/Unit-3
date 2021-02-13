@@ -1,7 +1,7 @@
 # lunar Homework
+
+## ER diagram for the database
 ![](https://github.com/TimurGar/Unit-3/blob/main/ER%20diagram%20for%20Phone%20Store%20Application.png)
-
-
 Fig 1. Image of the ER diagram for the Phone store
 
 ```.py
@@ -19,3 +19,7 @@ VALUES ('Juan',12345678,'juan@gmail.com','2020-11-20'),
        ('Ben',34579388,'ben@email.es','2014-05-13'),
        ('Tim',9760492,'timtim@gmail.com','2021-01-01');
 ```
+
+## UML diagram for the database
+![](https://github.com/TimurGar/Unit-3/blob/main/UML%20diagram%20for%20Phone%20store.png)
+
