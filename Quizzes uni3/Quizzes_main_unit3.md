@@ -87,9 +87,8 @@ class Quiz19():
 test1 = Quiz19("100!000!111").decode()
 print(test1)
 ```
-## Testing
-![](https://github.com/TimurGar/Unit-3/blob/main/Quizzes%20uni3/Quiz%2020%20system%20diagram.png)
-
+### Testing
+![](https://github.com/TimurGar/Unit-3/blob/main/Quizzes%20uni3/Quiz%2019%20test.png)
 ## Quiz 20
 ### System diagram
 ![](https://github.com/TimurGar/Unit-3/blob/main/Quizzes%20uni3/Quiz%2020%20system%20diagram.png)
@@ -117,3 +116,6 @@ class Quiz20():
 
 test1 = Quiz20("01ABxy").swap()
 ```
+### Testing
+![](https://github.com/TimurGar/Unit-3/blob/main/Quizzes%20uni3/Quiz%2020%20test.png)
+
