@@ -60,6 +60,36 @@ test3.evenly_spaced(4, 6, 3)
 ```
 ![](https://github.com/TimurGar/Unit-3/blob/main/Quizzes%20uni3/Quiz%2017%202.png)
 
+
+
+## Quiz 19
+### Solution
+```.py
+# Quiz 19
+
+Blist = ['000', '001', '010', '011', '100', '101', '110', '111']
+numbers = [0,1,2,3,4,5,6,7,8,9]
+class Quiz19():
+    # Initializing the class:
+    def __init__(self, I):
+        self.I = I.split("!")
+
+    # Creating an algorithm that is going to decode the input
+    def decode(self):
+        out = ""
+        for i in range(len(self.I)):
+            for y in range(len(Blist)):
+                if self.I[i] == Blist[y]:
+                    out += str(numbers[y])
+
+        return out
+
+test1 = Quiz19("100!000!111").decode()
+print(test1)
+```
+## Testing
+![](https://github.com/TimurGar/Unit-3/blob/main/Quizzes%20uni3/Quiz%2020%20system%20diagram.png)
+
 ## Quiz 20
 ### System diagram
 ![](https://github.com/TimurGar/Unit-3/blob/main/Quizzes%20uni3/Quiz%2020%20system%20diagram.png)
