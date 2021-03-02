@@ -59,3 +59,31 @@ test2.evenly_spaced(4, 6, 2)
 test3.evenly_spaced(4, 6, 3)
 ```
 ![](https://github.com/TimurGar/Unit-3/blob/main/Quizzes%20uni3/Quiz%2017%202.png)
+
+## Quiz 20
+### System diagram
+![](https://github.com/TimurGar/Unit-3/blob/main/Quizzes%20uni3/Quiz%2020%20system%20diagram.png)
+### Solution
+```.py
+# Quiz 20
+
+class Quiz20():
+    # Initializing the class:
+    def __init__(self, inp):
+        self.inp = inp
+
+    # Creating an algorithm that is going to change the characters places
+    def swap(self):
+
+        # if the input is consist only of 1 number
+        if len(self.inp) < 2:
+            out = self.inp
+        else:
+            # if the input is bigger than 2 characters
+            out = ""
+            for i in range(0, len(self.inp), 2):
+                out += self.inp[i+1] + self.inp[i]
+        print(out)
+
+test1 = Quiz20("01ABxy").swap()
+```
