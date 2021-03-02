@@ -87,7 +87,7 @@ test1 = Quiz18("39").num_steps()
 print(test1)
 ```
 ### Testing
-![](https://github.com/TimurGar/Unit-3/blob/main/Quizzes%20uni3/Quiz%2020%20test.png)
+![](https://github.com/TimurGar/Unit-3/blob/main/Quizzes%20uni3/Quiz%2018.png)
 
 
 ## Quiz 19
