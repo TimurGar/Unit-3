@@ -60,6 +60,34 @@ test3.evenly_spaced(4, 6, 3)
 ```
 ![](https://github.com/TimurGar/Unit-3/blob/main/Quizzes%20uni3/Quiz%2017%202.png)
 
+## Quiz 18
+### Solution
+```.py
+# Quiz 18
+
+class Quiz18():
+    # Initializing the class:
+    def __init__(self,N):
+        self.N = N
+
+    # Creating an algorithm that is going to calculate the number of steps needed
+    def num_steps(self):
+        steps = 0
+        while len(self.N) > 1:
+            p = 1
+            steps += 1
+            for i in range(len(self.N)):
+                p *= int(self.N[i])
+                
+            self.N = str(p)
+
+        return steps
+
+test1 = Quiz18("39").num_steps()
+print(test1)
+```
+### Testing
+![](https://github.com/TimurGar/Unit-3/blob/main/Quizzes%20uni3/Quiz%2020%20test.png)
 
 
 ## Quiz 19
