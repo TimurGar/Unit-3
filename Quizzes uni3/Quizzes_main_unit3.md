@@ -147,3 +147,69 @@ test1 = Quiz20("01ABxy").swap()
 ### Testing
 ![](https://github.com/TimurGar/Unit-3/blob/main/Quizzes%20uni3/Quiz%2020%20test.png)
 
+
+## Quiz 21
+### Solution
+```.py
+# Quiz 21
+# Inputs:
+# face of the emoji, left hand
+
+# Output:
+# full emoji(left hand, face, right hand)
+
+
+#######Notes#######
+# Input (~n~), <-
+# <.../ \...>
+
+# normal diff 2(<>,{},[])
+
+# / - 47
+# \ - 92
+# dif 45
+
+# ( - 40
+# ) - 41
+# dif 1
+#######Notes#######
+
+class Quiz_21():
+    # initialyzing
+    def __init__(self,face,larm):
+        self.face = face
+        self.larm = larm
+
+    # algorithm that will make a full emoji
+    def emoji(self):
+        # flipping the hand(left to right)
+        rarm = self.larm[::-1]
+        out = ""
+        odd_char_f = ""
+
+        # Checking if any if the right hand,rarm, contains any irregular characters
+        # Irregular characters: <>,{},[], /\
+        for l in rarm:
+            if l not in "-.|o\\":
+                # Convertring characters to UNICODE, changing the character and converting back
+                # chr - num to character, Ex: 41 - ")"
+                # ord - character to num, Ex: ")" - 41
+                odd_char_f += chr(ord(l) + 2)
+            elif l in "\\":
+                odd_char_f += chr(ord(l) - 45)
+            else:
+                odd_char_f += l
+
+
+        rarm = rarm.replace(rarm[-1], odd_char_f)
+        out = self.larm + self.face + odd_char_f
+
+        print(out)
+
+test1 = Quiz_21("(~n~)","|-").emoji()
+test2 = Quiz_21("('|-|')","o-").emoji()
+test3 = Quiz_21("[?????]","<...\\").emoji()
+```
+### Testing
+![](https://github.com/TimurGar/Unit-3/blob/main/Quizzes%20uni3/Quiz%2021%20test.png)
+
