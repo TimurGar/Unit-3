@@ -213,3 +213,45 @@ test3 = Quiz_21("[?????]","<...\\").emoji()
 ### Testing
 ![](https://github.com/TimurGar/Unit-3/blob/main/Quizzes%20uni3/Quiz%2021%20test.png)
 
+## Quiz 22
+### Solution
+```.py
+# Quiz 22
+# Input:
+# string, Ex: "Hello world !"
+
+# Output:
+# string with first and last character of the string and the number of characters in between,
+# Ex: H3o w3d !
+
+
+class Quiz_22():
+    # initialyzing
+    def __init__(self,inp):
+        self.inp = inp
+
+    # main algorithm
+    def BlackBox(self):
+        out = ""
+        # spliting string into words or numbers
+        sinp = self.inp.split(" ")
+        for i in sinp:
+            mlen = len(i)
+            if mlen > 2:
+                # combaning first, num in between, and last characters
+                out += f"{i[0]}{mlen-2}{i[-1]} "
+            else:
+                out += f"{i} "
+        print(out)
+
+# Testinf
+tes1 = Quiz_22("internationalization").BlackBox()
+tes2 = Quiz_22("Hello world !").BlackBox()
+tes3 = Quiz_22("98 99 100 101 102").BlackBox()
+tes4 = Quiz_22("(codin) + (game) = (codingame)").BlackBox()
+
+```
+### Testing
+![](https://github.com/TimurGar/Unit-3/blob/main/Quizzes%20uni3/Quiz%2022%20test.png)
+
+
