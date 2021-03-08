@@ -254,4 +254,36 @@ tes4 = Quiz_22("(codin) + (game) = (codingame)").BlackBox()
 ### Testing
 ![](https://github.com/TimurGar/Unit-3/blob/main/Quizzes%20uni3/Quiz%2022%20test.png)
 
+## Quiz 23
+### Solution
+```.py
+# Quiz 23
+# Inputs:
+# Three sides of the triangles
+
+# Output:
+# prints weather the input sides can construct a triangle
+
+
+class Quiz_23():
+    # initializing
+    def __init__(self,a,b,c):
+        self.a = a
+        self.b = b
+        self.c = c
+    
+    # the algorithm that will check weather the input size can construct a triangle
+    def Triangles(self):
+        if self.a + self.b > self.c and self.b + self.c > self.a and self.a + self.c > self.b:
+            return print(True)
+        else:
+            return print(False)
+# Testing
+test1 = Quiz_23(1,1,2).Triangles()
+test2 = Quiz_23(5,6,3).Triangles()
+test3 = Quiz_23(1,2,9).Triangles()
+test4 = Quiz_23(3,9,2).Triangles()
+```
+### Testing
+![](https://github.com/TimurGar/Unit-3/blob/main/Quizzes%20uni3/Quiz%2023%20test.png)
 
