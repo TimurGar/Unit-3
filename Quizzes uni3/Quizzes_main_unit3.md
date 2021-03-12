@@ -287,3 +287,38 @@ test4 = Quiz_23(3,9,2).Triangles()
 ### Testing
 ![](https://github.com/TimurGar/Unit-3/blob/main/Quizzes%20uni3/Quiz%2023%20test.png)
 
+## Quiz 24
+### Solution
+```.py
+# Quiz 24
+# Inputs:
+# coefficients a,b,c,d
+
+# Output:
+# expanded binomial
+
+class Quiz_24():
+    # initializing
+    def __init__(self,a,b,c,d):
+        self.a = a
+        self.b = b
+        self.c = c
+        self.d = d
+
+    # An algorithm that uses FOIL method to create and expanded binomial
+    def foil(self):
+        first = self.a* self.c
+        print_first = "" if first <= 1 else first
+        second = self.a * self.d + self.b * self.c
+        third = self.b * self.d
+        sign = "-" if second and third < 0 else "+"
+
+        out = f"{print_first}x^2{sign}{abs(second)}x{sign}{abs(third)}"
+        print(out)
+
+# Testing
+test1 = Quiz_24(1,3,1,2).foil()
+test2 = Quiz_24(1,13,1,-27).foil()
+```
+### Testing
+![](https://github.com/TimurGar/Unit-3/blob/main/Quizzes%20uni3/Quiz%2024%20test.png)
