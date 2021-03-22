@@ -26,3 +26,18 @@ Fig.1 Sketches of the application. The design for all five screens(Log In/Out, R
 ### ER diagram
 ![](https://github.com/TimurGar/Unit-3/blob/main/CS%20Mini%20IA%20-%20Dtrack/ER%20diagram%20Dtrack%20app.png)
 Fig.3 Er diagram of the Dtrack app. The diagram shows that the program will have 2 data tables in the database called User and Activity. One User may have N number of Activities therefore the relanship shown on the diagram is one to many. The User data table will store: username, email, password, and id(primary key). The Activity data table will store: distance, type of activity, date, and id(primary key).
+
+### Record of tasks
+| Task No. | Action                                                                        | Planned outcome                                                                                          | Time estimated | Target Completion date | Criteria |
+|----------|-------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------|----------------|------------------------|----------|
+| 1        | Planning: Discuss the context of the situation(1st interview with the client) | Written context of the problem                                                                           | 15 min         | March 18th             | A        |
+| 2        | Design: Created the system diagram and the ER diagram of the app              | Completed an ER  and  system diagrams explaining and showing the process of how the app works            | 60 min         | March 19th             | B        |
+| 3        | Development: Finish Log In/Out screen and Register screen for the app         | Working Log In/Out screen and Register screen which are able to add and check the data from the database | 120 min        | March 20th             | C        |
+| 4        | Development: Create a Home screen and New Activity screen for the app         | Working Home and New Activity screen                                                                     | 180 min        | March 21th             | C        |
+| 5        | Development: Create an All activities screen for the app                      | Working All Activities screen                                                                            | 120 min        | March 21th             | C        |
+| 6        | Development: Check the program, write comments, fix small bugs                | Finished and working as intended app                                                                     | 60 min         | March 23th             | C        |
+| 7        | Evaluation: Do testing(User acceptance testing, alpha testing, beta testing)  | All tested has been completed and documented                                                             | 120 min        | March 25the            | E        |
+
+
+
+Table.1 My plan for developing an app. The process is split up into stages for organizational and time consumption purposes
