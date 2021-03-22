@@ -7,7 +7,7 @@ Decreased amount of sugar means less insulin has to be injected therefore your l
 He needs to keep track of his activities and for now he uses notices of the smartphone which takes a lot of time to organise and he constantly afraid to lose his data.
 My dad would like to have a program that would make it very easy to add and view the activities that he does and so my dad asked me to create an app that would solve his problems with keeping his activities.
 
-After interviewing my dad I understood what problems he is currently facing(translated for Russian):
+After interviewing my dad I understood what problems he is currently facing(translated from Russian):
  1. It takes a long time to add new activity, no templates are available
  1. It takes a long time to organise and view actvities in the notes 
  1. There are a constant fear of accidently deleting activities
@@ -15,3 +15,5 @@ After interviewing my dad I understood what problems he is currently facing(tran
 
 
  Based on the problems listed above I decided to create an app called Dtrack which will solve my dad's problems. The program will have a Log In/Out screen to make sure no one except my dad can view his activity. It will have an easy to understand UI(user interface) which my allow my dad to navigate in the application and to easlity view his activity. The program will also allow my dad to quickly add new activity by just filling out a few spaces. All the activities as well as the user information will be stored in the database to prevent the lost of data.
+
+### Sketches of the ideas
