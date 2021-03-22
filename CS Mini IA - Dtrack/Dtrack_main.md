@@ -19,3 +19,6 @@ After interviewing my dad I understood what problems he is currently facing(tran
 ### Sketches of the ideas
 ![](https://github.com/TimurGar/Unit-3/blob/main/CS%20Mini%20IA%20-%20Dtrack/Sketches%20of%20the%20ideas.png)
 Fig.1 Sketches of the application. The design for all five screens(Log In/Out, Register, Home, All activities, New activity) are shown as well as how they interract with one another
+
+## Criteria B: Design
+### System Diagram
