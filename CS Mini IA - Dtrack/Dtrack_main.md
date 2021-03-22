@@ -22,3 +22,7 @@ Fig.1 Sketches of the application. The design for all five screens(Log In/Out, R
 
 ## Criteria B: Design
 ### System Diagram
+
+### ER diagram
+![](https://github.com/TimurGar/Unit-3/blob/main/CS%20Mini%20IA%20-%20Dtrack/ER%20diagram%20Dtrack%20app.png)
+Fig.3 Er diagram of the Dtrack app. The diagram shows that the program will have 2 data tables in the database called User and Activity. One User may have N number of Activities therefore the relanship shown on the diagram is one to many. The User data table will store: username, email, password, and id(primary key). The Activity data table will store: distance, type of activity, date, and id(primary key).
