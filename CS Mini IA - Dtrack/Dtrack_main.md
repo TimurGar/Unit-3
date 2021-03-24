@@ -47,12 +47,4 @@ Table.1 My plan for developing an app. The process is split up into stages for o
 
 ## Criteria C: Development
 ### Developement story No.1
-One of the biggest problems that I have encountered while developing Dtrack app was the creation of the All Activities screen. When you look at it, it seems pretty easy to make but it actually took me about 4 hours to create just that screen. The reason for that is that it has a lot of backend code(main.py) which is also closely connected to the front-end(main.kv). I really wanted to challenge myself and so I put a very high requirements for this screen. 
-This is the list of the requirements that I have put to myself while creating All Activites screen:
-1. It has to get and display all the information about every activity on the screen
-1. Only activities that are corresponded to a specific user has to be displayed
-1. Activities has to be filtered by date(most recent one on top)
-1. The screen should have a scrolling fiature to make sure the activities don't go over the boundries 
-1. The screen should look like a table 
-
-At first I didn't really know how to just get the information from the database and just display it on the screen. I was pretty sure that it was simple but I couldn't find a write article to meet my first requirement for the screen. I knew it is related to referencing elements by the use of "ids" of elements but we I did that it didn't work. After reading many articles, mainly on Stack Overflow I accidently fount that one person typed .text when he referencing the element. So I decided to try it out and it finaly worked. 
+One of the biggest problems that I have encountered while developing Dtrack app was trying to display a data(like a value from the database) on the screen. Not knowing this information was a huge struggle for me as I had to use it pretty often(Escpecially in the All Activities screen as it almost fully based on displaing and working with the data from a database). I was pretty sure that it was simple but it still took the whole day to solve. I knew it was related to referencing elements by the use of "ids" of elements but when I did that it didn't work. It just didn't print anything and because my development environment(PyCharm) didn't show any errors as my code was technically right, I couldn't understand my mistake. After reading so many articles, mainly on Stack Overflow, I accidently found that one person typed .text it the end when he referencing the element(the article actually wasn't connected at all to the problem I was trying to solve). So I decided to try it out and it finaly worked. I was very exausted as I spent the whole day 
