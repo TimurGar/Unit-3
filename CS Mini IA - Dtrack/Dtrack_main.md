@@ -44,3 +44,15 @@ Fig.3 Er diagram of the Dtrack app. The diagram shows that the program will have
 
 
 Table.1 My plan for developing an app. The process is split up into stages for organizational and time consumption purposes
+
+## Criteria C: Development
+### Developement story No.1
+One of the biggest problems that I have encountered while developing Dtrack app was the creation of the All Activities screen. When you look at it, it seems pretty easy to make but it actually took me about 4 hours to create just that screen. The reason for that is that it has a lot of backend code(main.py) which is also closely connected to the front-end(main.kv). I really wanted to challenge myself and so I put a very high requirements for this screen. 
+This is the list of the requirements that I have put to myself while creating All Activites screen:
+1. It has to get and display all the information about every activity on the screen
+1. Only activities that are corresponded to a specific user has to be displayed
+1. Activities has to be filtered by date(most recent one on top)
+1. The screen should have a scrolling fiature to make sure the activities don't go over the boundries 
+1. The screen should look like a table 
+
+At first I didn't really know how to just get the information from the database and just display it on the screen. I was pretty sure that it was simple but I couldn't find a write article to meet my first requirement for the screen. I knew it is related to referencing elements by the use of "ids" of elements but we I did that it didn't work. After reading many articles, mainly on Stack Overflow I accidently fount that one person typed .text when he referencing the element. So I decided to try it out and it finaly worked. 
