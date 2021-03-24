@@ -13,8 +13,10 @@ After interviewing my dad I understood what problems he is currently facing(tran
  1. There are a constant fear of accidently deleting activities
  1. No security, everybody who has an unlocked phone can view my dad's activity
 
+Additional requests:
+My dad would like to see a total distance conbined from all the activities that he has travelled so far for the motivational purposes.
 
- Based on the problems listed above I decided to create an app called Dtrack which will solve my dad's problems. The program will have a Log In/Out screen to make sure no one except my dad can view his activity. It will have an easy to understand UI(user interface) which my allow my dad to navigate in the application and to easlity view his activity. The program will also allow my dad to quickly add new activity by just filling out a few spaces. All the activities as well as the user information will be stored in the database to prevent the lost of data.
+ Based on the problems listed above as well as additional requests I decided to create an app called Dtrack which will solve my dad's problems. The program will have a Log In/Out screen to make sure no one except my dad can view his activity. It will have an easy to understand UI(user interface) which my allow my dad to navigate in the application and to easlity view his activity. The program will calculate the total distance travelled so far(from all the activities). The program will also allow my dad to quickly add new activity by just filling out a few spaces. All the activities as well as the user information will be stored in the database to prevent the lost of data.
 
 ### Sketches of the ideas
 ![](https://github.com/TimurGar/Unit-3/blob/main/CS%20Mini%20IA%20-%20Dtrack/Sketches%20of%20the%20ideas.png)
