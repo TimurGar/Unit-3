@@ -690,3 +690,30 @@ ScreenManager:
 ```
 ### Developement story No.2
 My second development story is going to be about my struggle of getting function “user_recent_activity()” in the Home screen to start working automatically without pressing any buttons. I wanted to make a sign that would use the username of the user and display it on the Home screen as soon as the user pressed “login” button so that when the screens would change from Login to Home, the user will be able to see “username, your most recent activity was:”. But the problem was that I couldn’t refer to a function that is located inside Home screen by pressing a button located in the Login screen, so I had to find a way to run the function “user_recent_activity()” automatically. First,I spent about one and a half hours to trying to fix this issue by using global variables but it didn’t work. Moreover, global variables would make my program less secure and more vulnerable to getting hacked	. So I again went on the internet and started reading articles and documentations. After about 2 hours of reading I found an article talking about screen manager, in which they mentioned function “on_pre_enter()”. This functions automatically initiates functions inside; once a user enters a screen. I used it and it finally worked! I once again proved to myself that I can find a way to overcome any challenge that I face, I just need enough courage to not give up.
+
+## Criteria D: Functionality
+### Login System:
+Users are able to login into the app using their emails and passwords.
+![](https://github.com/TimurGar/Unit-3/blob/main/CS%20Mini%20IA%20-%20Dtrack/Login%20screen.png)
+
+Fig.4 image of the Login screen
+
+### Registration 
+Users are able to create new accounts to then be able login into the app
+![](https://github.com/TimurGar/Unit-3/blob/main/CS%20Mini%20IA%20-%20Dtrack/Register%20screen.png)
+
+Fig.5 image of the Register screen
+
+### Home screen 
+On the Home screen, each user will be able to see their most recent activity, total distance travelled from all the activities, and view all activities the user has done so far.
+If the user hasn't recorded any activity yet, he will see the following:
+![](https://github.com/TimurGar/Unit-3/blob/main/CS%20Mini%20IA%20-%20Dtrack/Home%20screen%20no%20acivities%20yet.png)
+
+Fig.7 image of the Home screen of a new user, without any activities
+
+On the other hand, users with some activities will be able to see something like this(recent activity and distance will vary depending on the user as each user has done different acitivities):
+
+![](https://github.com/TimurGar/Unit-3/blob/main/CS%20Mini%20IA%20-%20Dtrack/Home%20screen.png)
+
+Fig.8 image of the Home screen
+
