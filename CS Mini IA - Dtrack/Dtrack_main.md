@@ -747,6 +747,7 @@ After creating a new activity all the data typed by a user will be recorded in t
 Fig.13 image of the Activity data table in the database with a sample of user's data
 
 ## Testing Plan
+### Alpha testing and Beta testing with classmates
 * Unit testing: Verification of the functionality of a certain component.
    1. Functionality of buttons
    2. Functionality of displaying data
@@ -761,3 +762,5 @@ Fig.13 image of the Activity data table in the database with a sample of user's 
 * Code review: Revision of the code to eliminate any errors
 * Integration testing: The validation of the Interface functioning within and between each other.
 * Software testing: Testing of the final product and checking if it fills all the requirements.
+
+
