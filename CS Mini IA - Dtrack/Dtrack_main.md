@@ -717,3 +717,29 @@ On the other hand, users with some activities will be able to see something like
 
 Fig.8 image of the Home screen
 
+### All Activities screen 
+On All Activities screen user is able to view all his/her activities done(recorded) so far. Each user have different activities therfore the screen will look different for everyone. Moreover all the activities are sorted by date, most recent are going to be on top.
+![](https://github.com/TimurGar/Unit-3/blob/main/CS%20Mini%20IA%20-%20Dtrack/All%20Activities%20screen.png)
+
+Fig.9 image of the All Activities screen
+
+### Adding new activities
+Every user is able to add an unlimited amount of activites by pressing "New Activity" button on the Home screen. After pressing the button, the user will be transfered to a New Activity screen where he/she can specify the type of activity, distance travelled during the activity, as well as, the date. 
+![](https://github.com/TimurGar/Unit-3/blob/main/CS%20Mini%20IA%20-%20Dtrack/New%20activity%20screen.png)
+
+Fig.10 image of the New Activity screen
+
+When the user will press "select a date" button to specify the date the user will see a calendar:
+![](https://github.com/TimurGar/Unit-3/blob/main/CS%20Mini%20IA%20-%20Dtrack/Calendar.png)
+
+Fig.11 image of the calendar opened by pressing "select a date" button
+
+After the user will choose a date he/she will see a text written on the screen with the selected date.
+![](https://github.com/TimurGar/Unit-3/blob/main/CS%20Mini%20IA%20-%20Dtrack/Selected%20date%20text.png)
+
+Fig.12 image of the Selected date text
+
+After creating a new activity all the data typed by a user will be recorded in the database and it is going to be availble to view in the All activities screen
+![](https://github.com/TimurGar/Unit-3/blob/main/CS%20Mini%20IA%20-%20Dtrack/Activities%20database.png)
+
+Fig.13 image of the Activity data table in the database with a sample of user's data
