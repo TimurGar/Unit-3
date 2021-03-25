@@ -17,6 +17,19 @@ Additional requests:
 My dad would like to see a total distance conbined from all the activities that he has travelled so far for the motivational purposes.
 
  Based on the problems listed above as well as additional requests I decided to create an app called Dtrack which will solve my dad's problems. The program will have a Log In/Out screen to make sure no one except my dad can view his activity. It will have an easy to understand UI(user interface) which my allow my dad to navigate in the application and to easlity view his activity. The program will calculate the total distance travelled so far(from all the activities). The program will also allow my dad to quickly add new activity by just filling out a few spaces. All the activities as well as the user information will be stored in the database to prevent the lost of data.
+ 
+### Criteria for success(based on the feedback during the interview)
+Success criteria in order of priority. These criterias have been consulted with and confirmed by the client.
+| No. | Success criteria                   | Explanation                                                                                                                                                                                                                              |
+|-----|------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| 1   | Log In/Out system                  | The user should be able to enter his/her email and password into  the app and if the data entered is correct(by checking with an app database)  the user should see a Home screen.  The user should also be able to log out from the app |
+| 2   | Registration system                | The user should be able to create a new account by entering  his/her personal data and the app should store this data into a database                                                                                                    |
+| 3   | Adding new activities              | The user should be able to add new activities by filling out a form and  the app should store this data into a database                                                                                                                  |
+| 4   | Viewing most recent activity       | The app should be able to sort all the activities added by a user and  display the most recent activity on the screen                                                                                                                    |
+| 5   | Viewing total distance             | The app should be able to calculate the total distance traveled by  a user from all his/her activities                                                                                                                                   |
+| 6   | Viewing all activities             | The app should be able to display all the activities added by a user  in a form of a table. Activities must be sorted by date(most recent on top)                                                                                        |
+| 7   | High usability and pleasing design | The app should have easy to navigate user interface. No instructions or manual needed.                                                                                                                                                   |
+
 
 ### Sketches of the ideas
 ![](https://github.com/TimurGar/Unit-3/blob/main/CS%20Mini%20IA%20-%20Dtrack/Sketches%20of%20the%20ideas.png)
