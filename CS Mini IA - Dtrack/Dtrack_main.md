@@ -725,6 +725,7 @@ Fig.9 image of the All Activities screen
 
 ### Adding new activities
 Every user is able to add an unlimited amount of activites by pressing "New Activity" button on the Home screen. After pressing the button, the user will be transfered to a New Activity screen where he/she can specify the type of activity, distance travelled during the activity, as well as, the date. 
+
 ![](https://github.com/TimurGar/Unit-3/blob/main/CS%20Mini%20IA%20-%20Dtrack/New%20activity%20screen.png)
 
 Fig.10 image of the New Activity screen
@@ -740,6 +741,7 @@ After the user will choose a date he/she will see a text written on the screen w
 Fig.12 image of the Selected date text
 
 After creating a new activity all the data typed by a user will be recorded in the database and it is going to be availble to view in the All activities screen
+
 ![](https://github.com/TimurGar/Unit-3/blob/main/CS%20Mini%20IA%20-%20Dtrack/Activities%20database.png)
 
 Fig.13 image of the Activity data table in the database with a sample of user's data
