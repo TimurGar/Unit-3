@@ -745,3 +745,19 @@ After creating a new activity all the data typed by a user will be recorded in t
 ![](https://github.com/TimurGar/Unit-3/blob/main/CS%20Mini%20IA%20-%20Dtrack/Activities%20database.png)
 
 Fig.13 image of the Activity data table in the database with a sample of user's data
+
+## Testing Plan
+* Unit testing: Verification of the functionality of a certain component.
+   1. Functionality of buttons
+   2. Functionality of displaying data
+   3. Error messages
+   4. New user's information check 
+   5. Storying user's information in the database check
+   6. Log In/Out system check
+   7. Adding New activity check
+   9. Selecting date check
+   10. Viewing all activities check
+   11. Labeling check
+* Code review: Revision of the code to eliminate any errors
+* Integration testing: The validation of the Interface functioning within and between each other.
+* Software testing: Testing of the final product and checking if it fills all the requirements.
