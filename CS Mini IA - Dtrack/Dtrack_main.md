@@ -786,6 +786,8 @@ Down bellow you can see Alpha,Beta testing table that I've created to check my p
 
 Table.2 Alpha,Beta testing table
 
+
+
 ### Alpha testing of my program
 https://youtu.be/izhUgLs4vP4
 ### Beta testing with classmates:
@@ -794,16 +796,24 @@ https://youtu.be/Yjk6c1R0nU8
 https://youtu.be/_ump7FVCI0c
 ### User acceptance testing:
 
-### Bug fix found during Beta testing
+
+### Alpha, Beta Testing results:
+![Testing results 1](https://user-images.githubusercontent.com/60378207/112711274-817f9880-8f0a-11eb-83d6-60100f3650ab.jpg)
+![Testing results 2](https://user-images.githubusercontent.com/60378207/112711281-90664b00-8f0a-11eb-959c-dc268bdeafae.jpg)
+Fig.14 images of Aplha, Beta testing results 
+
+
+
+### Bug found during Beta testing
 As you may noticed from Beta testing with an external expert video, the expert(Natalia G11) found a bug in my app. The bug is caused by pressing Create button on the New Activity screen before inputing any data in the input fields(type of activity, distance, date). This cause the program to save an empty row in the database and so causing a problem when the programis trying to calculate the total distance. 
 ![Error during Beta testing](https://user-images.githubusercontent.com/60378207/112708067-1d050f00-8ef3-11eb-9874-f4de7174c21a.png)
 
-Fig.14 image of error occured during Beta testing
+Fig.15 image of error occured during Beta testing
 
 To fix that during the Beta testing I had to go to Activity data table in the database, and manually delete the activity(errase the whole row of data), which is definetly not a way to go. 
 ![Errored activity](https://user-images.githubusercontent.com/60378207/112708145-a6b4dc80-8ef3-11eb-9e9c-404f7eccf59b.png)
 
-Fig.15 image of activty that caused an error during the beta testing
+Fig.16 image of activty that caused an error during the beta testing
 
 To fix that once and for all, I added the if statement which checks wherther inputs are empty("") or None type.
 ```.py
@@ -819,11 +829,11 @@ The difference between empty input and None type input is:
 In the database it looks like that:
 
 ![Errored activity types](https://user-images.githubusercontent.com/60378207/112710842-6bbca400-8f07-11eb-835c-c785793dc431.png)
-Fig.15 image of types of data that were stored in the database during the bug
+Fig.17 image of types of data that were stored in the database during the bug
 
 And this is how my program works now:
 https://user-images.githubusercontent.com/60378207/112711016-af63dd80-8f08-11eb-9ae1-be9f165321ea.mov
-Fig. 16 video of the app after the bug fix
+Fig. 18 video of the app after the bug fix
 
 In conclusion, I want to say that I am very happy that during the Beta testing an actual bug was found. This means that the testing wasn't pointless.
 
