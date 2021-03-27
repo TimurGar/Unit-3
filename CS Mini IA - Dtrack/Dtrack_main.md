@@ -794,6 +794,7 @@ https://youtu.be/Yjk6c1R0nU8
 https://youtu.be/_ump7FVCI0c
 ### User acceptance testing:
 
+### Bug fix found during Beta testing
 As you may noticed from Beta testing with an external expert video, the expert(Natalia G11) found a bug in my app. The bug is caused by pressing Create button on the New Activity screen before inputing any data in the input fields(type of activity, distance, date). This cause the program to save an empty row in the database and so causing a problem when the programis trying to calculate the total distance. 
 ![Error during Beta testing](https://user-images.githubusercontent.com/60378207/112708067-1d050f00-8ef3-11eb-9874-f4de7174c21a.png)
 
@@ -816,6 +817,7 @@ The difference between empty input and None type input is:
 * if you click on the input field but don't type anything -> empty input
 
 In the database it looks like that:
+
 ![Errored activity types](https://user-images.githubusercontent.com/60378207/112710842-6bbca400-8f07-11eb-835c-c785793dc431.png)
 Fig.15 image of types of data that were stored in the database during the bug
 
