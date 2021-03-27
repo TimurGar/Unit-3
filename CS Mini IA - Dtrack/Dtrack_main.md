@@ -794,4 +794,36 @@ https://youtu.be/Yjk6c1R0nU8
 https://youtu.be/_ump7FVCI0c
 ### User acceptance testing:
 
+As you may noticed from Beta testing with an external expert video, the expert(Natalia G11) found a bug in my app. The bug is caused by pressing Create button on the New Activity screen before inputing any data in the input fields(type of activity, distance, date). This cause the program to save an empty row in the database and so causing a problem when the programis trying to calculate the total distance. 
+![Error during Beta testing](https://user-images.githubusercontent.com/60378207/112708067-1d050f00-8ef3-11eb-9874-f4de7174c21a.png)
+
+Fig.14 image of error occured during Beta testing
+
+To fix that during the Beta testing I had to go to Activity data table in the database, and manually delete the activity(errase the whole row of data), which is definetly not a way to go. 
+![Errored activity](https://user-images.githubusercontent.com/60378207/112708145-a6b4dc80-8ef3-11eb-9e9c-404f7eccf59b.png)
+
+Fig.15 image of activty that caused an error during the beta testing
+
+To fix that once and for all, I added the if statement which checks wherther inputs are empty("") or None type.
+```.py
+# Checks where the inputs fields are filled in
+if type_of_activity == None or type_of_activity == "" or distance_travelled_input == None or distance_travelled_input == "" or selected_date == None or selected_date == "":
+   print("All the input fields has to be fielded out")
+else:
+```
+The difference between empty input and None type input is:
+* if you don't click on the input field at all -> None type
+* if you click on the input field but don't type anything -> empty input
+
+In the database it looks like that:
+![Errored activity types](https://user-images.githubusercontent.com/60378207/112710842-6bbca400-8f07-11eb-835c-c785793dc431.png)
+Fig.15 image of types of data that were stored in the database during the bug
+
+And this is how my program works now:
+https://user-images.githubusercontent.com/60378207/112711016-af63dd80-8f08-11eb-9ae1-be9f165321ea.mov
+Fig. 16 video of the app after the bug fix
+
+In conclusion, I want to say that I am very happy that during the Beta testing an actual bug was found. This means that the testing wasn't pointless.
+
+
 
