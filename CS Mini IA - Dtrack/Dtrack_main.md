@@ -37,7 +37,7 @@ Fig.1 Sketches of the application. The design for all five screens(Log In/Out, R
 Fig.2 System diagram of the Dtrack app
 ### ER diagram
 ![](https://github.com/TimurGar/Unit-3/blob/main/CS%20Mini%20IA%20-%20Dtrack/ER%20diagram%20Dtrack%20app.png)
-Fig.3 Er diagram of the Dtrack app. The diagram shows that the program will have 2 data tables in the database called User and Activity. One User may have N number of Activities therefore the relanship shown on the diagram is one to many. The User data table will store: username, email, password, and id(primary key). The Activity data table will store: distance, type of activity, date, and id(primary key).
+Fig.3 Er diagram of the Dtrack app. The diagram shows that the program will have 2 data tables in the database called User and Activity. One User may have N number of Activities therefore the relationship shown on the diagram is one to many. The User data table will store: username, email, password, and id(primary key). The Activity data table will store: distance, type of activity, date, and id(primary key).
 
 ### Table of planning
 | Task No. | Action                                                                        | Planned outcome                                                                                          | Time estimated | Target Completion date | Criteria |
@@ -56,7 +56,8 @@ Table.1 My plan for developing an app. The process is split up into stages for o
 
 ## Criteria C: Development
 ### Developement story No.1
-One of the biggest problems that I have encountered while developing Dtrack app was trying to display a data(like a value from the database) on the screen. Not knowing this information was a huge struggle for me as I had to use it pretty often(Especially in the All Activities screen as it almost fully based on displaying and working with the data from a database). I was pretty sure that it was simple but it still took the whole day to solve. I knew it was related to referencing elements by the use of "ids" of elements but when I did that it didn't work. It just didn't print anything and because my development environment(PyCharm) didn't show any errors as my code was technically right, I couldn't understand my mistake. After reading so many articles, mainly on Stack Overflow, I accidentally found that one person typed ".text" it the end when he referencing the element(the article actually wasn't connected at all to the problem I was trying to solve). So I decided to try it out and it finally worked. I was very exhausted as I spent the whole day trying to solve just one problem but at the same time I learned that I can actually overcome any problem if I will put enough time and effort into it.
+One of the biggest problems that I have encountered while developing Dtrack app was trying to display data(like a value from the database) on the screen. Not knowing this information was a huge struggle for me as I had to use it pretty often(Especially in the All Activities screen as it is almost fully based on displaying and working with the data from a database). I was pretty sure that it was simple but it still took the whole day to solve. I knew it was related to referencing elements by the use of "ids" of elements but when I did that it didn't work. It just didn't print anything and because my development environment(PyCharm) didn't show any errors as my code was technically right, I couldn't understand my mistake. After reading so many articles, mainly on Stack Overflow, I accidentally found that one person typed ".text" at the end when he referencing the element(the article actually wasn't connected at all to the problem I was trying to solve). So I decided to try it out and it finally worked. I was very exhausted as I spent the whole day trying to solve just one problem but at the same time, I learned that I can actually overcome any problem if I will put enough time and effort into it.
+relationship
 
 ### Code for Dtrack app
 ### main.py | backend of the application
@@ -177,13 +178,14 @@ class LoginScreen(MDScreen):
             # Go to the Home screen
             self.parent.current = "HomeScreen"
         else:
-            print("User does not exist")
+            print("User does not exist or wrong email/password")
 
 # Backend code for the Activity screen
 class ActivityScreen(MDScreen):
     selected_date = None
     type_of_activity = None
     distance = None
+
 
     # Following three functions control the calendar
     # ---
@@ -202,32 +204,43 @@ class ActivityScreen(MDScreen):
         date_dialog.bind(on_save=self.on_save, on_cancel=self.on_cancel)
         date_dialog.open()
     # ---
-
     def create_new_activity(self):
-        print("activity created")
         type_of_activity = self.ids.type_of_activity_input.text
         distance_travelled_input = self.ids.distance_travelled_input.text
         selected_date = ActivityScreen.selected_date
 
-        # Saves data typed in the type_of_activity,distance_travelled_input,
-        # selected_date text fields for later use
-        ActivityScreen.selected_date = selected_date
-        ActivityScreen.type_of_activity = type_of_activity
-        ActivityScreen.distance = distance_travelled_input
+        # Checks where the inputs fields are filled in
+        if type_of_activity == None or type_of_activity == "" or distance_travelled_input == None or distance_travelled_input == "" or selected_date == None or selected_date == "":
+            print("All the input fields has to be filled out")
+        else:
+            s.close()
+            type_of_activity = self.ids.type_of_activity_input.text
+            distance_travelled_input = self.ids.distance_travelled_input.text
+            selected_date = ActivityScreen.selected_date
 
-        print(
-            f"New activity named {type_of_activity} has been created, distance travelled = {distance_travelled_input}.  It happened on {selected_date}")
-        # Adds all the entered data in the database
-        activity = Activity(distance=distance_travelled_input, type_of_activity=type_of_activity, date=selected_date,
-                            user_id=LoginScreen.current_user_id)
-        s.add(activity)
-        s.commit()
+            # Saves data typed in the type_of_activity,distance_travelled_input,
+            # selected_date text fields for later use
+            ActivityScreen.selected_date = selected_date
+            ActivityScreen.type_of_activity = type_of_activity
+            ActivityScreen.distance = distance_travelled_input
+
+            print(
+                f"New activity named {type_of_activity} has been created, distance travelled = {distance_travelled_input}.  It happened on {selected_date}")
+            # Adds all the entered data in the database
+            activity = Activity(distance=distance_travelled_input, type_of_activity=type_of_activity,
+                                date=selected_date,
+                                user_id=LoginScreen.current_user_id)
+            s.add(activity)
+            s.commit()
+
+            # Go to the Home screen
+            self.parent.current = "HomeScreen"
 
 # Backend code for the Home screen
 class HomeScreen(MDScreen):
 
     # following function automatically initiates
-    # a function once an user enters a screen.
+    # a function once a user enters a screen.
     def on_pre_enter(self, *args):
         self.user_recent_activity()
         self.user_total_distance()
@@ -541,7 +554,6 @@ ScreenManager:
                 padding: dp(50)
                 on_release:
                     root.create_new_activity()
-                    root.parent.current = "HomeScreen"
 
             MDLabel:
 
@@ -698,7 +710,7 @@ ScreenManager:
                     root.parent.current = "ActivityScreen"
 ```
 ### Developement story No.2
-My second development story is going to be about my struggle of getting function “user_recent_activity()” in the Home screen to start working automatically without pressing any buttons. I wanted to make a sign that would use the username of the user and display it on the Home screen as soon as the user pressed “login” button so that when the screens would change from Login to Home, the user will be able to see “username, your most recent activity was:”. But the problem was that I couldn’t refer to a function that is located inside Home screen by pressing a button located in the Login screen, so I had to find a way to run the function “user_recent_activity()” automatically. First,I spent about one and a half hours to trying to fix this issue by using global variables but it didn’t work. Moreover, global variables would make my program less secure and more vulnerable to getting hacked	. So I again went on the internet and started reading articles and documentations. After about 2 hours of reading I found an article talking about screen manager, in which they mentioned function “on_pre_enter()”. This functions automatically initiates functions inside; once a user enters a screen. I used it and it finally worked! I once again proved to myself that I can find a way to overcome any challenge that I face, I just need enough courage to not give up.
+My second development story is going to be about my struggle of getting function “user_recent_activity()” in the Home screen to start working automatically without pressing any buttons. I wanted to make a sign that would use the username of the user and display it on the Home screen as soon as the user pressed “login” button so that when the screens would change from Login to Home, the user will be able to see “username, your most recent activity was:”. But the problem was that I couldn’t refer to a function that is located inside Home screen by pressing a button located in the Login screen, so I had to find a way to run the function “user_recent_activity()” automatically. First, I spent about one and a half hours trying to fix this issue by using global variables but it didn’t work. Moreover, global variables would make my program less secure and more vulnerable to getting hacked. So I again went on the internet and started reading articles and documentations. After about 2 hours of reading, I found an article talking about screen manager, in which they mentioned function “on_pre_enter()”. This function automatically initiates functions inside; once a user enters a screen. I used it and it finally worked! I once again proved to myself that I can find a way to overcome any challenge that I face, I just need enough courage to not give up.
 
 ## Criteria D: Functionality
 ### Login System:
@@ -727,7 +739,7 @@ On the other hand, users with some activities will be able to see something like
 Fig.8 image of the Home screen
 
 ### All Activities screen 
-On All Activities screen user is able to view all his/her activities done(recorded) so far. Each user have different activities therfore the screen will look different for everyone. Moreover all the activities are sorted by date, most recent are going to be on top.
+On All Activities screen user is able to view all his/her activities done(recorded) so far. Each user have different activities therefore the screen will look different for everyone. Moreover all the activities are sorted by date, most recent are going to be on top.
 ![](https://github.com/TimurGar/Unit-3/blob/main/CS%20Mini%20IA%20-%20Dtrack/All%20Activities%20screen.png)
 
 Fig.9 image of the All Activities screen
@@ -749,7 +761,7 @@ After the user will choose a date he/she will see a text written on the screen w
 
 Fig.12 image of the Selected date text
 
-After creating a new activity all the data typed by a user will be recorded in the database and it is going to be availble to view in the All activities screen
+After creating a new activity all the data typed by a user will be recorded in the database and it is going to be available to view in the All activities screen
 
 ![](https://github.com/TimurGar/Unit-3/blob/main/CS%20Mini%20IA%20-%20Dtrack/Activities%20database.png)
 
