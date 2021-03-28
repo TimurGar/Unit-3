@@ -2,21 +2,17 @@
 ### By Timur Garifullin
 ## Criteria A: Planning
 ### Context of the product
-My dad has a diabity type-1 therefore he has an increased amount of sugar in the blood. To decrease the amount of sugar you need to exercise(Ex: running). 
-Decreased amount of sugar means less insulin has to be injected therefore your liver stays more healthy and so a better quality of life. To keep track of the blood sugar my dad exercises a lot, he at least once a day.
-He needs to keep track of his activities and for now he uses notices of the smartphone which takes a lot of time to organise and he constantly afraid to lose his data.
-My dad would like to have a program that would make it very easy to add and view the activities that he does and so my dad asked me to create an app that would solve his problems with keeping his activities.
+My dad has a disability type-1 therefore he has an increased amount of sugar in the blood. To decrease the amount of sugar you need to exercise(Ex: running). Decreased amount of sugar means less insulin has to be injected therefore your liver stays more healthy and so a better quality of life. To keep track of the blood sugar my dad exercises a lot, at least once a day. He needs to keep track of his activities and for now, he uses notices of the smartphone which takes a lot of time to organize and he constantly afraid to lose his data. My dad would like to have a program that would make it very easy to add and view the activities that he does and so my dad asked me to create an app that would solve his problems with keeping his activities.
 
 After interviewing my dad I understood what problems he is currently facing(translated from Russian):
- 1. It takes a long time to add new activity, no templates are available
- 1. It takes a long time to organise and view actvities in the notes 
- 1. There are a constant fear of accidently deleting activities
- 1. No security, everybody who has an unlocked phone can view my dad's activity
+1. It takes a long time to add a new activity, no templates are available
+2. It takes a long time to organize and view activities in the notes
+3. There is a constant fear of accidentally deleting activities
+4. No security, everybody who has an unlocked phone can view my dad's activity
 
-Additional requests:
-My dad would like to see a total distance conbined from all the activities that he has travelled so far for the motivational purposes.
+Additional requests: My dad would like to see a total distance combined from all the activities that he has traveled so far for motivational purposes.
 
- Based on the problems listed above as well as additional requests I decided to create an app called Dtrack which will solve my dad's problems. The program will have a Log In/Out screen to make sure no one except my dad can view his activity. It will have an easy to understand UI(user interface) which my allow my dad to navigate in the application and to easlity view his activity. The program will calculate the total distance travelled so far(from all the activities). The program will also allow my dad to quickly add new activity by just filling out a few spaces. All the activities as well as the user information will be stored in the database to prevent the lost of data.
+Based on the problems listed above as well as additional requests I decided to create an app called Dtrack which will solve my dad's problems. The program will have a Log In/Out screen to make sure no one except my dad can view his activity. It will have an easy-to-understand UI(user interface) which my allow my dad to navigate in the application and to easily view his activity. The program will calculate the total distance traveled so far(from all the activities). The program will also allow my dad to quickly add new activity by just filling out a few spaces. All the activities as well as the user information will be stored in the database to prevent the loss of data.
  
 ### Criteria for success(based on the feedback during the interview)
 Success criteria in order of priority. These criterias have been consulted with and confirmed by the client.
