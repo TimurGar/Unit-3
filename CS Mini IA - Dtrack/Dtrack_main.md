@@ -35,9 +35,14 @@ Fig.1 Sketches of the application. The design for all five screens(Log In/Out, R
 ### System Diagram
 ![](https://github.com/TimurGar/Unit-3/blob/main/CS%20Mini%20IA%20-%20Dtrack/System%20diagram%20Dtrack.png)
 Fig.2 System diagram of the Dtrack app
+
+### UML diagram
+![UML diagram ](https://user-images.githubusercontent.com/60378207/113231395-1fda7800-92d6-11eb-9ed4-6530bae7e5b8.png)
+
+Fig.3 UML diagram of the DTrack app. The diagram shows that the program will have 2 data tables in the database called User and Activity as well as the variables that are in the data tables.
 ### ER diagram
 ![](https://github.com/TimurGar/Unit-3/blob/main/CS%20Mini%20IA%20-%20Dtrack/ER%20diagram%20Dtrack%20app.png)
-Fig.3 Er diagram of the Dtrack app. The diagram shows that the program will have 2 data tables in the database called User and Activity. One User may have N number of Activities therefore the relationship shown on the diagram is one to many. The User data table will store: username, email, password, and id(primary key). The Activity data table will store: distance, type of activity, date, and id(primary key).
+Fig.4 Er diagram of the Dtrack app. The diagram shows that the program will have 2 data tables in the database called User and Activity. One User may have N number of Activities therefore the relationship shown on the diagram is one to many. The User data table will store: username, email, password, and id(primary key). The Activity data table will store: distance, type of activity, date, and id(primary key).
 
 ### Table of planning
 | Task No. | Action                                                                        | Planned outcome                                                                                          | Time estimated | Target Completion date | Criteria |
