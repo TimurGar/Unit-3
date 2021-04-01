@@ -79,7 +79,7 @@ from kivymd.app import MDApp
 from kivymd.uix.label import MDLabel
 from kivymd.uix.screen import MDScreen
 from kivymd.uix.picker import MDDatePicker
-
+import hashlib, binascii, os
 # Creating a base to connect with the database
 Base = declarative_base()
 
@@ -89,7 +89,7 @@ class User(Base):
     id = Column(Integer, primary_key=True)
     username = Column(String)
     password = Column(String)
-    email = Column(String)
+    email = Column(String, unique= True)
 
 # Creating an Activity table in the database
 class Activity(Base):
@@ -116,6 +116,16 @@ s = session()
 
 # Backend code for the Register screen
 class RegisterScreen(MDScreen):
+
+    def hash_password(self, password):
+        """Hash a password for storing."""
+        salt = hashlib.sha256(os.urandom(60)).hexdigest().encode(
+            'ascii')  # hashing a ramdom sequence with 60 bits: produces 256 bits or 64 hex chars
+        pwdhash = hashlib.pbkdf2_hmac('sha256', password.encode('utf-8'),
+                                      salt, 100000)
+        pwdhash = binascii.hexlify(pwdhash)  # hashing the password with the salt producing 256 bits or 64 hex chars
+        return (salt + pwdhash).decode('ascii')  # total lenght is 128 chars or 512 bits
+
     # Functions that does registration processes
     def try_register(self):
         # saves all the inputs typed in text fields in a corresponding variables
@@ -130,7 +140,7 @@ class RegisterScreen(MDScreen):
         else:
 
             # Check if the user is not register already
-            user_check = s.query(User).filter_by(username=username, email=email, password=psw).first()
+            user_check = s.query(User).filter_by(email=email).first()
             print(user_check)
 
             # If the result is not equal to None(if that email and password wasn't found)
@@ -146,10 +156,12 @@ class RegisterScreen(MDScreen):
 
             else:
                 # adding a new user to a database
-                usr = User(username=username, email=email, password=psw)
+                hashed_psw = self.hash_password(psw)
+                print(hashed_psw)
+                usr = User(username=username, email=email, password=hashed_psw)
                 s.add(usr)
                 s.commit()
-                print(f"User <{username}> with email <{email}> and password: <{psw}> has been created")
+                print(f"User <{username}> with email <{email}> and password: <{hashed_psw}> has been created")
 
 
 # Backend code for the Login screen
@@ -164,6 +176,19 @@ class LoginScreen(MDScreen):
             self.ids.email_input.error = True
             self.ids.email_input.helper_text = "Email is not valid"
 
+
+    def verify_password(self, stored_password, provided_password):
+        """Verify a stored password against one provided by user"""
+        salt = stored_password[:64]
+        stored_password = stored_password[64:]
+        pwdhash = hashlib.pbkdf2_hmac('sha256',
+                                      provided_password.encode('utf-8'),
+                                      salt.encode('ascii'),
+                                      100000)
+        pwdhash = binascii.hexlify(pwdhash).decode('ascii')
+        return pwdhash == stored_password
+
+
     # Functions that does login
     # makes sure the email and password entered in the text field are correct
     def try_login(self):
@@ -171,9 +196,10 @@ class LoginScreen(MDScreen):
         email = self.ids.email_input.text
         psw = self.ids.password_input.text
         # Gets email and password data from the database
-        user_check = s.query(User).filter_by(email=email, password=psw).first()
+        user_check = s.query(User).filter_by(email=email).first()
+        stored_psw = user_check.password
 
-        if user_check:  # if the result different of None
+        if self.verify_password(stored_psw, psw) == True:  # if the result different of None
             s.close()
             # id, username, password, email = user_check
             print(f"login succeful for user with email {email} and password {psw}")
