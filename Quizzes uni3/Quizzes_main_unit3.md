@@ -322,3 +322,74 @@ test2 = Quiz_24(1,13,1,-27).foil()
 ```
 ### Testing
 ![](https://github.com/TimurGar/Unit-3/blob/main/Quizzes%20uni3/Quiz%2024%20test.png)
+
+## Quiz 25
+### Solution
+```.py
+
+```
+### Testing
+![](https://github.com/TimurGar/Unit-3/blob/main/Quizzes%20uni3/Quiz%2024%20test.png)
+
+## Quiz 26
+### Solution
+```.py
+# Quiz 26
+# Inputs:
+# List of numbers
+
+# Output:
+# sum of numbers in the list except between numbers 6 and 7
+
+class Quiz_26():
+    # initializing
+    def __init__(self,list_of_numbers):
+        self.list_of_numbers = list_of_numbers
+
+    # My original solution
+    def sum67(self):
+        sum = 0
+        sub_numbers = 0
+        # Going through every number in the list
+        for index, number in enumerate(self.list_of_numbers):
+            sum += number
+            # if number in a list is 6
+            if number == 6:
+                # record the index of the number
+                index6 = index
+                # adding all the numbers between 6 and 7
+                while self.list_of_numbers[index6] != 7:
+                    sub_numbers += self.list_of_numbers[index6]
+                    index6 += 1
+                sub_numbers += 7
+        # subtracting the sum of numbers between 6 and 7 from all the numbers
+        total = sum - sub_numbers
+        print(total)
+
+    # Second solution
+    def sum67_dif(self):
+        flag = False
+        sum = 0
+        for i in range(len(self.list_of_numbers)):
+            if flag == False:
+                if self.list_of_numbers[i] == 6:
+                    flag = True
+                else:
+                    sum += self.list_of_numbers[i]
+            else:
+                if self.list_of_numbers[i] == 7:
+                    flag = False
+
+        print(sum)
+
+# testing
+Quiz_26([1,2,2]).sum67()
+Quiz_26([1,2,2,6,99,99,7]).sum67()
+Quiz_26([1,1,6,7,2]).sum67()
+print("Second solution: ")
+Quiz_26([1,2,2]).sum67_dif()
+Quiz_26([1,2,2,6,99,99,7]).sum67_dif()
+Quiz_26([1,1,6,7,2]).sum67_dif()
+```
+### Testing
+![Quiz 26](https://user-images.githubusercontent.com/60378207/113383490-019c7700-93bf-11eb-985a-3d8155e59553.png)
