@@ -326,10 +326,55 @@ test2 = Quiz_24(1,13,1,-27).foil()
 ## Quiz 25
 ### Solution
 ```.py
+# Quiz 26
+# Inputs:
+# COVID-19  information about people as a List of Number of samples, SampleID, PatientID, Analysis, Result
 
+# Output:
+# Number of individuals positive, individuals tested and positive rate
+
+# Testing data
+file = [[2],
+        ["67316", "081019849","SARS","POS"],
+        ["6454316", "081019889","PCR","POS"],   # Don't count
+        ["3447316", "CONTROL","SARS","POS"],    # Don't count
+        ["27593","170814119","SARS","NEG"],
+        ["67316", "4599304","SARS","POS"],      # Don't count
+        ["607949","649458","SARS","ERR"]]       # Don't count
+
+class Quiz_25():
+    # initializing
+    def __init__(self, test_file):
+        self.test_file = test_file
+
+    # Main algorithm
+    def CovidAnalyse(self):
+        individuals_tested = 0
+        individuals_positive = 0
+        list_samples_ids = []
+
+        for index in range(1, len(self.test_file)):
+            sample_id, patient_id, analysis, result = self.test_file[index]
+            list_samples_ids.append(sample_id)
+
+            # Checks whether the patient data doesn't contain unnecessary information
+            # Separates wrong patient information from correct ones
+            if analysis == "SARS" and patient_id != "CONTROL" and result != "ERR" and list_samples_ids.count(sample_id) == 1:
+                individuals_tested += 1
+                # Checks whether the result is positive or negative
+                if result == "POS":
+                    individuals_positive += 1
+
+        # Calculating positive rate
+        positive_rate = individuals_positive / individuals_tested * 100
+        print(f"Individuals positive: {individuals_positive}\nIndividuals tested: {individuals_tested}\nPositive rate: {positive_rate}%")
+
+# Testing
+Quiz_25(test_file=file).CovidAnalyse()
 ```
 ### Testing
-![](https://github.com/TimurGar/Unit-3/blob/main/Quizzes%20uni3/Quiz%2024%20test.png)
+![Quiz 25](https://user-images.githubusercontent.com/60378207/113410376-3d026a00-93ee-11eb-94f0-6ba4fc66c30c.png)
+
 
 ## Quiz 26
 ### Solution
