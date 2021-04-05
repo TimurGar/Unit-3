@@ -438,3 +438,52 @@ Quiz_26([1,1,6,7,2]).sum67_dif()
 ```
 ### Testing
 ![Quiz 26](https://user-images.githubusercontent.com/60378207/113383490-019c7700-93bf-11eb-985a-3d8155e59553.png)
+
+
+## Quiz 27
+### Initial flow diagram 
+![IMG_20210405_135940](https://user-images.githubusercontent.com/60378207/113543336-2132da00-9621-11eb-8049-6285ced7d32b.jpg)
+
+
+### Solution
+```.py
+# Quiz 27
+# Inputs:
+# range on numbers(between a and b)
+
+# Output:
+# number of abundant numbers
+
+class Quiz_27():
+    # initializing
+    def __init__(self,a,b):
+        self.a = a
+        self.b = b
+
+    # main algorithm
+    def abundant(self):
+        abundant = []
+        num = 0
+        # going through all the numbers between a and b
+        for i in range(self.a,self.b+1):
+            sum = 0
+
+            # finding proper divisitors of each number
+            for y in range(1,i):
+                if i % y == 0:
+                    sum += y
+
+            # checking if a number is an abundant number
+            if i < sum:
+                abundant.append(i)
+                num += 1
+        print(num)
+
+# testing
+test1 = Quiz_27(1,40).abundant()
+test2 = Quiz_27(10,86).abundant()
+test3 = Quiz_27(13,78).abundant()
+```
+### Testing
+![Quiz 27](https://user-images.githubusercontent.com/60378207/113543264-f5afef80-9620-11eb-98a5-05f5622b5b93.png)
+
