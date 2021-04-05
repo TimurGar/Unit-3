@@ -887,5 +887,15 @@ Fig. 18 video of the app after the bug fix
 
 In conclusion, I want to say that I am very happy that during the Beta testing an actual bug was found. This means that the testing wasn't pointless.
 
+### Improvements
+Even though the app met all client's criteria, there are always things to improve/add. Therefore I made a list of features I would like to add if more time were given.
+### Webserver version
+The current version of the app is offline and requires a computer with Python and Python packages software installed in order to use it. Even though, it is not a problem for my client it would be nice to have an app that will be placed on the server and be accessible from any device over the internet. Keeping application of the server will require additional software(HTML, CSS, PHP/Python) but it will be a pretty big improvement in making an app more accessible
+
+### Data backup
+Currently, the app is storing all the users’ and activities’ data locally which makes it more vulnerable in the case of data loss. If for example, the hard disk drive of the computer crashes, all the data will be lost. One of the best option that could solve this, could be cloud storage(Ex: Google drive). It will allow us to backup all the data and so increase the redundancy of the system.
+
+### Password reset
+Currently, If the user forgets his/her password there is no way to reset it. It would be nice to add a button that would send an email to a user’s email with an opportunity to reset the password.
 
 
