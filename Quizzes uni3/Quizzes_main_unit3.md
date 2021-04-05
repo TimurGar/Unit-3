@@ -326,7 +326,7 @@ test2 = Quiz_24(1,13,1,-27).foil()
 ## Quiz 25
 ### Solution
 ```.py
-# Quiz 26
+# Quiz 25
 # Inputs:
 # COVID-19  information about people as a List of Number of samples, SampleID, PatientID, Analysis, Result
 
