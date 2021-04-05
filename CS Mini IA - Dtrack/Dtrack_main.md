@@ -798,6 +798,42 @@ After creating a new activity all the data typed by a user will be recorded in t
 
 Fig.13 image of the Activity data table in the database with a sample of user's data
 
+### Encrypting user's data 
+To protect the data of the user's, passwords in specifically, My program is
+1. hashing the password - generates a fixed-sized value of a randomly generated characters.
+2. Generates salt - randomly generated characters of a N size. Salt allow us avoid the repetiton of the hash. Ex: if two users have an exaclty same password their hash will be the same but additing salt to a hash makes them different and so much more secure. 
+3. Combines hash and salt together to get a unique 512 bits string which it stores in the database.
+
+Example of encrypted password with the method described above:
+![Example of hash](https://user-images.githubusercontent.com/60378207/113544728-d36ba100-9623-11eb-94f4-dd5f656f96fe.png)
+
+Python which makes it possible to encrypte user's passwords
+```.py
+    # Encodes a provided password 
+    def hash_password(self, password):
+        """Hash a password for storing."""
+        salt = hashlib.sha256(os.urandom(60)).hexdigest().encode(
+            'ascii')  # hashing a ramdom sequence with 60 bits: produces 256 bits or 64 hex chars
+        pwdhash = hashlib.pbkdf2_hmac('sha256', password.encode('utf-8'),
+                                      salt, 100000)
+        pwdhash = binascii.hexlify(pwdhash)  # hashing the password with the salt producing 256 bits or 64 hex chars
+        return (salt + pwdhash).decode('ascii')  # total lenght is 128 chars or 512 bits
+```
+```.py
+   # Checks if entered password in the password input field is a correct password
+    def verify_password(self, stored_password, provided_password):
+        """Verify a stored password against one provided by user"""
+        salt = stored_password[:64]
+        stored_password = stored_password[64:]
+        pwdhash = hashlib.pbkdf2_hmac('sha256',
+                                      provided_password.encode('utf-8'),
+                                      salt.encode('ascii'),
+                                      100000)
+        pwdhash = binascii.hexlify(pwdhash).decode('ascii')
+        return pwdhash == stored_password
+```
+
+
 ## Testing Plan
 Before presenting the program to my client(my dad), I've decided to do various types of testings to make sure the program works as expected and fits for a client.
 I've create a plan that I followed to test my program:
